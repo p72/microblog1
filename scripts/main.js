@@ -17,7 +17,7 @@ class MicroblogApp {
     }
 
     async loadPosts() {
-        const response = await fetch('/posts/posts.json');
+        const response = await fetch('./posts/posts.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
