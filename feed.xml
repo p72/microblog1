@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>マイクロブログ</title>
+        <description>シンプルなマイクロブログ - 短文投稿を気軽に共有</description>
+        <link>https://your-domain.vercel.app</link>
+        <atom:link href="https://your-domain.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
+        <language>ja</language>
+        <lastBuildDate>Fri, 28 Jun 2025 00:00:00 +0900</lastBuildDate>
+        <generator>Static Microblog</generator>
+        
+        <item>
+            <title>はじめての投稿</title>
+            <link>https://your-domain.vercel.app/#2025-06-28</link>
+            <guid>https://your-domain.vercel.app/#2025-06-28</guid>
+            <pubDate>Fri, 28 Jun 2025 00:00:00 +0900</pubDate>
+            <description><![CDATA[こんにちは！マイクロブログを始めました🎉
+
+シンプルで軽量なブログシステムを目指しています。
+投稿はMarkdownファイルで管理して、GitHub経由でVercelに自動デプロイされます。
+
+これからよろしくお願いします！]]></description>
+        </item>
+    </channel>
+</rss>

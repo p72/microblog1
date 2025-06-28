@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ページが見つかりません - マイクロブログ">
+    <meta property="og:title" content="404 - ページが見つかりません | マイクロブログ">
+    <meta property="og:description" content="お探しのページは見つかりませんでした。">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <title>404 - ページが見つかりません | マイクロブログ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">
+                <a href="/" style="color: inherit; text-decoration: none;">マイクロブログ</a>
+            </h1>
+            <p class="header__description">短文投稿を気軽に共有</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <div class="error-page">
+                <div class="error-page__content">
+                    <h2 class="error-page__title">404</h2>
+                    <p class="error-page__message">お探しのページは見つかりませんでした</p>
+                    <p class="error-page__description">
+                        申し訳ございませんが、お探しのページは存在しないか、移動された可能性があります。
+                    </p>
+                    <a href="/" class="error-page__link">ホームに戻る</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">&copy; 2025 マイクロブログ</p>
+        </div>
+    </footer>
+
+    <style>
+        .error-page {
+            text-align: center;
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .error-page__content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .error-page__title {
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1;
+        }
+
+        .error-page__message {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .error-page__description {
+            font-size: var(--font-size-base);
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-xl);
+            line-height: 1.6;
+        }
+
+        .error-page__link {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: white;
+            padding: var(--spacing-md) var(--spacing-xl);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.15s ease-in-out;
+        }
+
+        .error-page__link:hover {
+            background-color: var(--color-primary-dark);
+        }
+
+        .error-page__link:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 640px) {
+            .error-page__title {
+                font-size: 4rem;
+            }
+            
+            .error-page__message {
+                font-size: var(--font-size-lg);
+            }
+        }
+    </style>
+</body>
+</html>

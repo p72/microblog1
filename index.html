@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="シンプルなマイクロブログ - 短文投稿を気軽に共有">
+    <meta property="og:title" content="マイクロブログ">
+    <meta property="og:description" content="シンプルなマイクロブログ - 短文投稿を気軽に共有">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <title>マイクロブログ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">マイクロブログ</h1>
+            <p class="header__description">短文投稿を気軽に共有</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <section class="timeline" id="timeline" aria-label="投稿タイムライン">
+                <div class="timeline__loading" id="loading">
+                    投稿を読み込み中...
+                </div>
+                <div class="timeline__posts" id="posts" role="feed" aria-live="polite">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">&copy; 2025 マイクロブログ</p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
