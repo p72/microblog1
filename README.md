@@ -15,9 +15,8 @@
 
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript (ES modules)
 - **Styling**: CSS カスタムプロパティ + BEM 命名
-- **Hosting**: Vercel Static Hosting
+- **Hosting**: Vercel & GitHub Pages
 - **CI/CD**: GitHub Actions
-- **Linting**: HTMLHint, Stylelint
 
 ## 📁 プロジェクト構成
 
@@ -83,8 +82,18 @@ npm run build
 npm run serve
 ```
 
-### 3. Vercelデプロイ
+### 3. デプロイ
 
+#### GitHub Pages（自動デプロイ）
+```bash
+# mainブランチにプッシュするだけ
+git add .
+git commit -m "新しい投稿追加"
+git push origin main
+# → GitHub Actionsが自動でデプロイ
+```
+
+#### Vercel（手動デプロイ）
 ```bash
 # Vercel CLIをインストール（初回のみ）
 npm i -g vercel
@@ -150,24 +159,26 @@ npm run dev      # ビルド + サーバー起動
 - 📱 **モバイル**: Performance 100, Accessibility 100, Best Practices 96
 - 🖥️ **デスクトップ**: Performance 96, Accessibility 100, Best Practices 96
 
-## 🔍 品質チェック
+## 🔍 ローカルテスト
 
 ```bash
-# HTML lint
-htmlhint index.html 404.html
+# ローカルサーバーでテスト
+npm run dev
 
-# CSS lint  
-stylelint style.css
-
-# Lighthouse テスト
+# Lighthouse テスト（オプション）
 lighthouse http://localhost:8000
 ```
 
 ## 🚀 デプロイ後の運用
 
+### GitHub Pages
 1. **新規投稿**: `posts/` にMarkdownファイル追加 → `npm run build` → git push
 2. **自動デプロイ**: GitHub Actions が自動実行
-3. **品質チェック**: CI で Lighthouse・lint が自動実行
+3. **アクセス**: `https://ユーザー名.github.io/リポジトリ名`
+
+### Vercel
+1. **新規投稿**: `posts/` にMarkdownファイル追加 → `npm run build` → `vercel --prod`
+2. **アクセス**: カスタムドメインまたはVercel URL
 
 ## 📄 ライセンス
 
