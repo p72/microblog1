@@ -1,0 +1,13 @@
+{
+  "name": "microblog",
+  "version": "1.0.0",
+  "description": "シンプルなマイクロブログ",
+  "scripts": {
+    "build": "node scripts/build-posts.js",
+    "serve": "python3 -m http.server 8000",
+    "dev": "npm run build && npm run serve"
+  },
+  "keywords": ["blog", "microblog", "static", "vercel"],
+  "author": "",
+  "license": "MIT"
+}
