@@ -4,11 +4,10 @@
     --color-primary-dark: #1d4ed8;
     --color-text: #1f2937;
     --color-text-light: #6b7280;
-    --color-bg: #ffffff;
+    --color-bg: #fff;
     --color-bg-light: #f9fafb;
     --color-border: #e5e7eb;
     --color-border-light: #f3f4f6;
-    
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
@@ -16,18 +15,15 @@
     --font-size-lg: 1.125rem;
     --font-size-xl: 1.25rem;
     --font-size-2xl: 1.5rem;
-    
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
     --spacing-2xl: 3rem;
-    
     --border-radius: 0.5rem;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
     --max-width: 42rem;
 }
 
@@ -50,6 +46,9 @@ body {
     background-color: var(--color-bg-light);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -146,6 +145,13 @@ body {
     font-weight: 500;
 }
 
+/* Focus states for accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
 .post__content a:hover {
     color: var(--color-primary-dark);
     text-decoration: underline;
@@ -171,15 +177,10 @@ body {
     color: var(--color-text-light);
 }
 
-/* Layout */
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+/* Layout - merged with base body styles above */
 
 /* Responsive */
-@media (max-width: 640px) {
+@media (width <= 640px) {
     .header__container,
     .main__container,
     .footer__container {
@@ -203,20 +204,7 @@ body {
     }
 }
 
-/* Focus states for accessibility */
-a:focus,
-button:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    :root {
-        --color-border: #000000;
-        --color-text-light: #000000;
-    }
-}
+/* High contrast mode support - removed unsupported prefers-contrast */
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
