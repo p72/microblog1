@@ -1,4 +1,6 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "./",
   "headers": [
     {
       "source": "/(.*)",
@@ -27,7 +29,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico|svg))",
+      "source": "/static/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
