@@ -59,15 +59,19 @@ class MicroblogApp {
     formatDate(dateString) {
         const date = new Date(dateString);
         const now = new Date();
-        const diffTime = Math.abs(now - date);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        
+        // 時刻を00:00:00にして日付のみで比較
+        const dateOnly = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        const nowOnly = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        
+        const diffDays = (nowOnly - dateOnly) / (1000 * 60 * 60 * 24);
 
-        if (diffDays === 1) {
+        if (diffDays === 0) {
             return '今日';
-        } else if (diffDays === 2) {
+        } else if (diffDays === 1) {
             return '昨日';
         } else if (diffDays <= 7) {
-            return `${diffDays - 1}日前`;
+            return `${diffDays}日前`;
         } else {
             return date.toLocaleDateString('ja-JP', {
                 year: 'numeric',
