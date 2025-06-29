@@ -6,7 +6,7 @@
         <link>https://your-domain.vercel.app</link>
         <atom:link href="https://your-domain.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
         <language>ja</language>
-        <lastBuildDate>Sat, 28 Jun 2025 12:51:08 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 29 Jun 2025 07:24:10 GMT</lastBuildDate>
         <generator>Static Microblog</generator>
         
         <item>
@@ -24,6 +24,13 @@
 1. `posts/` フォルダに新しい `.md` ファイルを作成
 2. `node scripts/build-posts.js` を実行
 3. 完了！]]></description>
+        </item>
+        <item>
+            <title>Github</title>
+            <link>https://your-domain.vercel.app/#2025-06-29</link>
+            <guid>https://your-domain.vercel.app/#2025-06-29</guid>
+            <pubDate>Sun, 29 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Githubから投稿]]></description>
         </item>
         <item>
             <title>はじめての投稿</title>
