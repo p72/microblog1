@@ -177,6 +177,23 @@ button:focus {
     color: var(--color-text-light);
 }
 
+.footer__links {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin-top: var(--spacing-xs);
+}
+
+.footer__links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
 /* Layout - merged with base body styles above */
 
 /* Responsive */
